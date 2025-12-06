@@ -179,13 +179,20 @@ body {
   z-index: 1;
 }
 
+/* OUTER RING ABOVE THE IMAGE */
 .glow-circle::after {
   content: "";
   position: absolute;
-  inset: 12%;
+  inset: 10%;
   border-radius: 50%;
-  border: 1px solid rgba(249, 250, 251, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.45); /* neon ring */
+  box-shadow:
+    0 0 1px rgb(255, 255, 255),
+    0 0 3px rgb(255, 255, 255);
+  z-index: 6; /* 🔥 puts the ring ABOVE your image */
+  pointer-events: none;
 }
+
 
 /* IMAGE INSIDE CIRCLE */
 .glow-circle img {
@@ -195,11 +202,12 @@ body {
   transform: translateX(-50%);
   width: 105%;
   height: auto;
-  z-index: 2;  /* make image above the inner glow layer */
-  
+  z-index: 5; /* BELOW the circular ring */
+  object-fit: cover;
+
   filter:
-    drop-shadow(0 0 5px rgba(255, 24, 74, 0.25))
-    drop-shadow(0 0 12px rgba(255, 24, 74, 0.18));
+    drop-shadow(0 0 5px rgba(255, 24, 74, 0.20))
+    drop-shadow(0 0 10px rgba(255, 24, 74, 0.15));
 }
 
 
