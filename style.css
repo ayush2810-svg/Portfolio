@@ -162,7 +162,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible; /* allow top of the image to escape */
+  overflow: hidden; /* 🔴 keep everything INSIDE the circle */
+}
+
+.glow-circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 24, 74, 0.22) 0%,    /* inner soft glow */
+    rgba(255, 24, 74, 0.10) 40%,
+    rgba(255, 24, 74, 0.00) 80%
+  );
+  z-index: 1;
 }
 
 .glow-circle::after {
@@ -176,52 +190,18 @@ body {
 /* IMAGE INSIDE CIRCLE */
 .glow-circle img {
   position: absolute;
-  top: -29%;                 /* % of circle height → scales with it */
+  top: -5%;
   left: 50%;
   transform: translateX(-50%);
-  width: 88%;                /* % of circle width → scales with it */
+  width: 105%;
   height: auto;
-  z-index: 5;
-
-  /* soft glow on your body */
+  z-index: 2;  /* make image above the inner glow layer */
+  
   filter:
-    drop-shadow(0 0 5px rgba(255, 24, 74, 0.20))
-    drop-shadow(0 0 10px rgba(255, 24, 74, 0.15));
-
-  /* top fully visible, bottom fades into circle */
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 55%,
-    rgba(0, 0, 0, 0) 98%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 55%,
-    rgba(0, 0, 0, 0) 98%
-  );
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-
-
-  /* soft glow on your body */
-  filter:
-    drop-shadow(0 0 5px rgba(255, 24, 74, 0.20))
-    drop-shadow(0 0 10px rgba(255, 24, 74, 0.15));
-
-  /* top fully visible, bottom fades into circle */
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 55%,
-    rgba(0, 0, 0, 0) 98%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 55%,
-    rgba(0, 0, 0, 0) 98%
-  );
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
+    drop-shadow(0 0 5px rgba(255, 24, 74, 0.25))
+    drop-shadow(0 0 12px rgba(255, 24, 74, 0.18));
 }
+
 
 /* RIGHT SIDE: TEXT */
 .hero-right {
