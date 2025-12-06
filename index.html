@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="logo">
+      Port<span>folio</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">My Skills</a>
+      <a href="#projects">My Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- TODO: put your real resume file path here -->
+    <a href="assets/Ayush_Resume3[1].pdf" class="btn btn-outline small" download>
+      Download Resume
+    </a>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <!-- LEFT: IMAGE + RED GLOW -->
+      <div class="hero-left">
+        <div class="glow-circle">
+          <img src="AYUSH-removebg-preview.png" alt="Ayush profile" />
+        </div>
+      </div>
+
+      <!-- RIGHT: TEXT CONTENT -->
+      <div class="hero-right">
+        <p class="hero-intro">Hello, I'm</p>
+        <h1 class="hero-name">Ayush</h1>
+        <h2 class="hero-role">
+          And I'm a <span>Full-Stack Learner</span>
+        </h2>
+
+        <p class="hero-desc">
+          I'm a web development student learning the fundamentals of HTML, CSS, and
+          JavaScript. I enjoy creating simple, responsive layouts while improving my
+          skills and exploring modern design practices.
+        </p>
+
+        <!-- Social icons -->
+        <div class="hero-socials">
+          <!-- TODO: replace # with your real profile links -->
+          <a href="https://github.com/ayush2810-svg"
+             aria-label="GitHub" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ayush-kulal-769159374"
+             aria-label="LinkedIn"
+                target="_blank"
+             rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+
+          <a href="https://x.com/ayush8270153644?s=11"
+             aria-label="X (Twitter)" target="_blank" rel="noopener">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+
+        <!-- Buttons -->
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+          <a href="#projects" class="btn btn-outline">View Projects</a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Tech Stack</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">1+</span>
+            <span class="stat-label">Years Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about" class="section about">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-text">
+      I'm Ayush, a web development student focused on building a strong foundation
+      in HTML, CSS, and JavaScript. I enjoy turning ideas into clean, responsive
+      interfaces and I'm constantly learning new concepts, tools, and best practices
+      to improve my work step by step.
+    </p>
+  </section>
+
+  <!-- MY SKILLS -->
+  <section id="skills" class="section skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">Git &amp; GitHub</div>
+      <div class="skill-card">Basic UI Design</div>
+    </div>
+  </section>
+
+  <!-- MY PROJECTS -->
+  <section id="projects" class="section projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Personal Portfolio</h3>
+        <p>
+          A responsive portfolio website (this one!) built using HTML, CSS and
+          JavaScript to showcase my skills and projects.
+        </p>
+        <!-- TODO: replace with real GitHub / live demo link -->
+        <a href="#" target="_blank">View Code</a>
+      </div>
+
+      <div class="project-card">
+        <h3>FINANCE-TRACKER</h3>
+        <p>
+          An userFriendly plateform for tracking their financial condition . 
+          A website made using CSS, JavaScript, react.js, Node.js, TensorFlow. 
+          a simple yet usefull website created for the user to track their finance by entering their income and expence !
+        </p>
+       <a href="https://github.com/ayush2810-svg/finance-tracker" 
+   target="_blank" rel="noopener">
+  View Code
+</a>
+      </div>
+
+      <div class="project-card">
+        <h3>DENTRAZE</h3>
+        <p>
+           Developed a Digital Dental Imaging and Cephalometric plateform for automated dental notations. 
+           Tools and models used – Python, JavaScript, Html,CSS. YoloV8, CNN, U-Net, HRNet. 
+           Created an AI – Driven automated Dental plateform for cephalometric analysis and automated dental notation to ease 
+           The dentist efforts and save more time. 
+        </p>
+        <a href="#" target="_blank">View Code</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-text">
+      Want to collaborate or just say hi? You can reach me at
+      <strong>yourmail@example.com</strong> or use the form below.
+    </p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>
