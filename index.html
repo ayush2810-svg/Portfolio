@@ -173,19 +173,44 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <h2 class="section-title">Contact</h2>
-    <p class="section-text">
-      Want to collaborate or just say hi? You can reach me at
-      <strong>yourmail@example.com</strong> or use the form below.
-    </p>
+<section id="contact" class="section contact">
+  <h2 class="section-title">Contact</h2>
+  <p class="section-text">
+    Want to collaborate or just say hi? You can reach me at
+    <strong>ayushkulal282@gmail.com</strong> or use the form below.
+  </p>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
+  <form
+    class="contact-form"
+    action="https://formspree.io/f/xjggvkdp"
+    method="POST"
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    />
+
+    <textarea
+      name="message"
+      rows="4"
+      placeholder="Your Message"
+      required
+    ></textarea>
+
+    <button type="submit" class="btn btn-primary">
+      Send Message
+    </button>
+  </form>
+
   </section>
   <script src="script.js"></script>
 </body>
