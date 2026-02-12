@@ -1,4 +1,4 @@
-/* BASIC RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +18,8 @@ body {
 
 /* COLOR VARIABLES */
 :root {
-  --primary: #ff184a;        /* main red */
-  --primary-dark: #b31234;   /* darker red */
+  --primary: #ff184a;       
+  --primary-dark: #b31234;   
   --bg-dark: #050509;
   --panel: #0b0b10;
   --muted: #9ca3af;
@@ -152,7 +152,7 @@ body {
 
 .glow-circle {
   position: relative;
-  width: clamp(220px, 40vw, 320px);   /* responsive size */
+  width: clamp(220px, 40vw, 320px);  
   height: clamp(220px, 40vw, 320px);
   border-radius: 50%;
   background: radial-gradient(circle at 30% 20%, #ffffff 0, #ff184a 40%, #050509 80%);
@@ -162,14 +162,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* 🔴 keep everything INSIDE the circle */
+  overflow: hidden; 
 }
 
 /* RED LIGHTNING AURA BEHIND IMAGE */
 .glow-circle::before {
   content: "";
   position: absolute;
-  inset: -8%;                       /* slightly bigger than circle */
+  inset: -8%;                       
   border-radius: 50%;
   background:
     /* soft red fog glow */
@@ -189,11 +189,11 @@ body {
       transparent 73%,
       transparent 100%
     );
-  mix-blend-mode: screen;           /* blends nicely with bg + img */
+  mix-blend-mode: screen;           
   opacity: 0;
   transform: scale(1);
   animation: lightningPulse 4.2s infinite ease-out;
-  z-index: 3;                       /* behind ring and image */
+  z-index: 3;                      
   pointer-events: none;
 }
 @keyframes lightningPulse {
@@ -225,11 +225,11 @@ body {
   position: absolute;
   inset: 10%;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.45); /* neon ring */
+  border: 2px solid rgba(255, 255, 255, 0.45); 
   box-shadow:
     0 0 1px rgb(255, 255, 255),
     0 0 3px rgb(255, 255, 255);
-  z-index: 6; /* 🔥 puts the ring ABOVE your image */
+  z-index: 6; 
   pointer-events: none;
 }
 
@@ -242,7 +242,7 @@ body {
   transform: translateX(-50%);
   width: 105%;
   height: auto;
-  z-index: 5; /* BELOW the circular ring */
+  z-index: 5; 
   object-fit: cover;
 
   filter:
@@ -577,7 +577,7 @@ body {
   }
 
   .nav {
-    display: none; /* you can replace with a mobile menu later */
+    display: none; 
   }
 
   .hero {

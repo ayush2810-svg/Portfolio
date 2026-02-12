@@ -1,6 +1,4 @@
-/* ================================
-   MOBILE MENU TOGGLE
-================================ */
+
 const menuBtn = document.getElementById("menu-btn");
 const nav = document.querySelector(".nav");
 
@@ -17,18 +15,12 @@ nav?.querySelectorAll("a").forEach((link) => {
 });
 
 
-/* ================================
-   FOOTER YEAR
-================================ */
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
 
 
-/* ================================
-   CONTACT FORM (FAKE SUBMISSION)
-================================ */
 const form = document.getElementById("contact-form");
 const statusText = document.getElementById("form-status");
 
@@ -46,26 +38,19 @@ if (form) {
 }
 
 
-/* ================================
-   PAGE LOAD FADE-IN ANIMATION
-================================ */
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("page-loaded");
 });
 
-
-/* ================================
-   TYPING EFFECT (Hero Text)
-================================ */
 document.addEventListener("DOMContentLoaded", () => {
   const typingEl = document.getElementById("typing-text");
   if (!typingEl) return;
 
   const text = typingEl.getAttribute("data-text") || typingEl.textContent.trim();
   let index = 0;
-  const speed = 90; // typing speed
+  const speed = 90; 
 
-  typingEl.textContent = ""; // clear text before typing starts
+  typingEl.textContent = ""; 
 
   function type() {
     if (index <= text.length) {
